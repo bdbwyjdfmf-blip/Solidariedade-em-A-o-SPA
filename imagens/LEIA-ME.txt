@@ -1,0 +1,1 @@
+Coloque nesta pasta as imagens do projeto anterior (logo.jpg, banner.jpg, educacao.jpg, alimentacao.jpg e comunidade.jpg).
