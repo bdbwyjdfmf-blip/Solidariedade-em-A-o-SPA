@@ -4,8 +4,24 @@ const app = document.querySelector("#app");
 
 export function navegar(rota) {
   const rotaValida = Object.hasOwn(templates, rota) ? rota : "inicio";
+
   app.innerHTML = templates[rotaValida];
   history.replaceState(null, "", `#${rotaValida}`);
+
+  document.querySelectorAll("[data-route]").forEach((link) => {
+    if (link.dataset.route === rotaValida) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+
+  const conteudoPrincipal = document.querySelector("#conteudo-principal");
+
+  if (conteudoPrincipal) {
+    conteudoPrincipal.focus();
+  }
+
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 

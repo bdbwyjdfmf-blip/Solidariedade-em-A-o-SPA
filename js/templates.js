@@ -59,9 +59,9 @@ export const templates = {
     <section class="section">
       <div class="container">
         <span class="eyebrow">Voluntariado</span>
-        <h1>Cadastre-se para participar</h1>
+       <h1 id="titulo-cadastro">Cadastre-se para participar</h1>
 
-        <form id="form-voluntario">
+        <form id="form-voluntario" novalidate aria-labelledby="titulo-cadastro">
           <label for="nome">Nome completo</label>
           <input
             id="nome"

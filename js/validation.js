@@ -35,6 +35,8 @@ function mostrarErro(campo) {
     mensagem = document.createElement("small");
     mensagem.className = "mensagem-erro";
     mensagem.dataset.erro = campo.id;
+    mensagem.id = `erro-${campo.id}`;
+    mensagem.setAttribute("role", "alert");
 
     campo.insertAdjacentElement(
       "afterend",
@@ -43,11 +45,20 @@ function mostrarErro(campo) {
   }
 
   mensagem.textContent = obterMensagem(campo);
+
+  campo.setAttribute("aria-invalid", "true");
+  campo.setAttribute(
+    "aria-describedby",
+    `erro-${campo.id}`
+  );
 }
 
 function mostrarSucesso(campo) {
   campo.classList.remove("campo-erro");
   campo.classList.add("campo-valido");
+
+  campo.setAttribute("aria-invalid", "false");
+  campo.removeAttribute("aria-describedby");
 
   const mensagem = campo.parentElement.querySelector(
     `[data-erro="${campo.id}"]`
@@ -118,9 +129,7 @@ export function iniciarValidacao() {
   });
 
   document.addEventListener("submit", (event) => {
-    if (
-      event.target.id !== "form-voluntario"
-    ) {
+    if (event.target.id !== "form-voluntario") {
       return;
     }
 
@@ -159,6 +168,9 @@ export function iniciarValidacao() {
         "campo-valido",
         "campo-erro"
       );
+
+      campo.removeAttribute("aria-invalid");
+      campo.removeAttribute("aria-describedby");
     });
 
     renderizarCadastros();
@@ -171,7 +183,7 @@ export function iniciarValidacao() {
     }
   });
 
-  document.addEventListener("click", (event) => {
+   document.addEventListener("click", (event) => {
     const link = event.target.closest("[data-route]");
 
     if (
