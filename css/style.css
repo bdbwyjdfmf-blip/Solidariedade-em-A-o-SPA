@@ -360,3 +360,56 @@ input[type="checkbox"]{
   font-size: .85rem;
   font-weight: 600;
 }
+/* Modo de alto contraste */
+.btn-contraste {
+  padding: 10px 15px;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  background: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-contraste:focus-visible {
+  outline: 3px solid #ffdd00;
+  outline-offset: 3px;
+}
+
+body.alto-contraste {
+  background: #000000;
+  color: #ffffff;
+}
+
+body.alto-contraste .site-header,
+body.alto-contraste .site-footer,
+body.alto-contraste .hero,
+body.alto-contraste .section,
+body.alto-contraste .card,
+body.alto-contraste form,
+body.alto-contraste .cadastro-salvo {
+  background: #000000;
+  color: #ffffff;
+}
+
+body.alto-contraste a,
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste p,
+body.alto-contraste label,
+body.alto-contraste .eyebrow {
+  color: #ffffff;
+}
+
+body.alto-contraste .btn {
+  background: #ffdd00;
+  color: #000000;
+  border: 2px solid #ffffff;
+}
+
+body.alto-contraste input,
+body.alto-contraste select {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}

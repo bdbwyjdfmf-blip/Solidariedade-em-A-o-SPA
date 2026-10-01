@@ -27,6 +27,13 @@ export const templates = {
         <span class="eyebrow">Solidariedade que transforma</span>
         <h1>Juntos podemos construir um futuro melhor.</h1>
         <p>Desenvolvemos projetos sociais para apoiar pessoas e fortalecer a comunidade.</p>
+        <img
+  src="../imagens/voluntariado.webp"
+  alt="Voluntários participando de uma ação de distribuição de alimentos"
+  loading="lazy"
+  width="1024"
+  height="1024"
+>
         <a href="#projetos" class="btn" data-route="projetos">
           Conheça nossos projetos
         </a>
