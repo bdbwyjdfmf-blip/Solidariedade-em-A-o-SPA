@@ -27,6 +27,13 @@ export const templates = {
         <span class="eyebrow">Solidariedade que transforma</span>
         <h1>Juntos podemos construir um futuro melhor.</h1>
         <p>Desenvolvemos projetos sociais para apoiar pessoas e fortalecer a comunidade.</p>
+        <img
+  src="../imagens/voluntariado.webp"
+  alt="Voluntários participando de uma ação de distribuição de alimentos"
+  loading="lazy"
+  width="1024"
+  height="1024"
+>
         <a href="#projetos" class="btn" data-route="projetos">
           Conheça nossos projetos
         </a>
@@ -59,9 +66,9 @@ export const templates = {
     <section class="section">
       <div class="container">
         <span class="eyebrow">Voluntariado</span>
-        <h1>Cadastre-se para participar</h1>
+       <h1 id="titulo-cadastro">Cadastre-se para participar</h1>
 
-        <form id="form-voluntario">
+        <form id="form-voluntario" novalidate aria-labelledby="titulo-cadastro">
           <label for="nome">Nome completo</label>
           <input
             id="nome"
