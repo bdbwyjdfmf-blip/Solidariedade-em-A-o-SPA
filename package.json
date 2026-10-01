@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "vite html",
+    "build": "vite build html",
+    "preview": "vite preview html"
+  },
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}
