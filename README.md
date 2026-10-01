@@ -33,11 +33,25 @@ Solidariedade em Ação é uma aplicação web do tipo Single Page Application (
 
 ## Dependências
 
-O projeto utiliza JavaScript puro (Vanilla JavaScript) e não possui dependências externas que precisem ser instaladas.
+O projeto utiliza Node.js e npm para gerenciamento das dependências de desenvolvimento.
+
+As principais dependências são:
+- Vite - utilizado para desenvolvimento e geração da build de produção.
+- gh-pages - utilizado para publicação da build no GitHub Pages.
+
+Para instalar as dependências, execute:
+
+npm install
 
 ## Build
 
-Não é necessária uma etapa de build, pois o projeto utiliza HTML, CSS e JavaScript nativos.
+A build de produção é gerada com o Vite, que otimiza e prepara os arquivos para publicação.
+
+Para gerar a build, execute:
+
+npm run build
+
+Os arquivos de produção são gerados na pasta html/dist.
 
 ## Testes
 
@@ -53,4 +67,7 @@ O projeto está sendo revisado com base nas diretrizes WCAG 2.1 nível AA.
 
 ## Deploy
 
-A versão de produção será publicada ao final do processo de otimização e validação.
+A aplicação está publicada no GitHub Pages. O deploy utiliza a branch gh-pages, contendo a build de produção gerada pelo Vite.
+
+Site publicado:
+https://bdbwyjdfmf-blip.github.io/Solidariedade-em-A-o-SPA/
