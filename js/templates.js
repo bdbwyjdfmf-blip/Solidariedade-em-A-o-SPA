@@ -1,3 +1,4 @@
+const imagemVoluntariado = new URL("../imagens/voluntariado.webp", import.meta.url).href;
 const projetos = [
   {
     titulo: "Educação",
@@ -28,7 +29,7 @@ export const templates = {
         <h1>Juntos podemos construir um futuro melhor.</h1>
         <p>Desenvolvemos projetos sociais para apoiar pessoas e fortalecer a comunidade.</p>
         <img
-  src="../imagens/voluntariado.webp"
+  src="${imagemVoluntariado}"
   alt="Voluntários participando de uma ação de distribuição de alimentos"
   loading="lazy"
   width="1024"
